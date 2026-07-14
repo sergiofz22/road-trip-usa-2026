@@ -21,6 +21,23 @@ section{padding:42px 0}.section-head{display:flex;justify-content:space-between;
 footer{padding:40px 0 90px;color:var(--muted);text-align:center}
 @media(max-width:880px){.hero-grid,.grid-2,.grid-3{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.place-grid,.checklist{grid-template-columns:1fr}.topbar .nav{display:none}.hero{padding-top:42px}.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:40;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(8,13,24,.95);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px 6px calc(8px + env(safe-area-inset-bottom))}.bottom-nav a{text-decoration:none;color:var(--muted);font-size:.72rem;text-align:center;padding:6px}.bottom-nav b{display:block;font-size:1.15rem}.print-btn{bottom:76px}}
 @media print{.topbar,.bottom-nav,.print-btn{display:none}body{background:white;color:#111}.panel,.hero-card,.timeline-card,.place-card{background:white;box-shadow:none;border-color:#bbb}.lead,.section-head p,.timeline-card p,.place-card small,.budget-row span{color:#444}}
+
+.photo-hero{position:relative;isolation:isolate;border-radius:0 0 34px 34px;overflow:hidden}
+.photo-hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--hero-image);background-size:cover;background-position:center;opacity:.42}
+.photo-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,13,24,.98) 0%,rgba(8,13,24,.84) 48%,rgba(8,13,24,.30) 100%),linear-gradient(0deg,var(--bg),transparent 48%)}
+.timeline-card{overflow:hidden;padding:0}
+.day-photo{width:100%;height:190px;object-fit:cover;display:block;background:#1b2437}
+.timeline-content{padding:16px}
+.timeline-dot{margin:16px 0 0 16px;position:absolute;z-index:2;box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.timeline-card{position:relative;display:block}
+.place-card{padding:0;overflow:hidden;display:block;position:relative}
+.place-photo{width:100%;height:210px;object-fit:cover;display:block;background:#1b2437}
+.place-body{display:grid;grid-template-columns:48px 1fr auto;gap:12px;align-items:center;padding:14px}
+.photo-credit{font-size:.72rem;color:#8691a6;margin-top:7px}
+.photo-credit a{color:#aeb8ca}
+.image-note{padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:rgba(103,232,249,.06);color:var(--muted);margin-bottom:18px}
+@media(max-width:880px){.day-photo{height:170px}.place-photo{height:185px}.photo-hero::after{background:linear-gradient(0deg,var(--bg) 2%,rgba(8,13,24,.75) 55%,rgba(8,13,24,.40))}}
+
 </style>
 </head>
 <body>
@@ -40,7 +57,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
 </header>
 
 <main class="app" id="inicio">
-  <section class="hero">
+  <section class="hero photo-hero" style="--hero-image:url('https://unsplash.com/photos/eTHI_qnk46Y/download?force=true&w=1600')">
     <div class="hero-grid">
       <div>
         <div class="eyebrow"><span  data-es="ROAD TRIP USA · 2026" data-en="USA ROAD TRIP · 2026">ROAD TRIP USA · 2026</span></div>
@@ -93,7 +110,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
   <section id="dias">
     <div class="section-head"><div><h2><span  data-es="Itinerario" data-en="Itinerary">Itinerario</span></h2><p><span  data-es="Cada día incluye distancia, tiempo y acceso directo a Google Maps." data-en="Each day includes distance, time and a direct link to Google Maps.">Cada día incluye distancia, tiempo y acceso directo a Google Maps.</span></p></div></div>
     <div class="timeline">
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/JliXJH8FJCM/download?force=true&w=1600" alt="Dallas skyline" onerror="this.style.display='none'">
       <div class="timeline-dot">1</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -108,7 +125,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 35 km</span><span>⏱️ 0 h 45</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/zPhYj34f1Mw/download?force=true&w=1600" alt="Fort Worth Stockyards" onerror="this.style.display='none'">
       <div class="timeline-dot">2</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -123,7 +140,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 145 km</span><span>⏱️ 2 h</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/JliXJH8FJCM/download?force=true&w=1600" alt="Dallas skyline" onerror="this.style.display='none'">
       <div class="timeline-dot">3</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -138,7 +155,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 20 km</span><span>⏱️ 0 h 30</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/XwmqeX7Vsso/download?force=true&w=1600" alt="San Antonio River Walk" onerror="this.style.display='none'">
       <div class="timeline-dot">4</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -153,7 +170,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 490 km</span><span>⏱️ 5 h</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/XwmqeX7Vsso/download?force=true&w=1600" alt="San Antonio River Walk" onerror="this.style.display='none'">
       <div class="timeline-dot">5</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -168,7 +185,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 25 km</span><span>⏱️ 1 h</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/nC8rXxksMWM/download?force=true&w=1600" alt="Corpus Christi coastline" onerror="this.style.display='none'">
       <div class="timeline-dot">6</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -183,7 +200,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 235 km</span><span>⏱️ 2 h 20</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/nC8rXxksMWM/download?force=true&w=1600" alt="Corpus Christi coastline" onerror="this.style.display='none'">
       <div class="timeline-dot">7</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -198,7 +215,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 40 km</span><span>⏱️ 1 h</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/Heu3w0ejWBM/download?force=true&w=1600" alt="Port Aransas and Padre Island" onerror="this.style.display='none'">
       <div class="timeline-dot">8</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -213,7 +230,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 165 km</span><span>⏱️ 3 h</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/jlTy96QYNRU/download?force=true&w=1600" alt="Las Vegas Strip" onerror="this.style.display='none'">
       <div class="timeline-dot">9</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -228,7 +245,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 10 km</span><span>⏱️ 0 h 25</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/jlTy96QYNRU/download?force=true&w=1600" alt="Las Vegas Strip" onerror="this.style.display='none'">
       <div class="timeline-dot">10</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -243,7 +260,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 15 km</span><span>⏱️ 0 h 30</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/IqxM5DmwRpU/download?force=true&w=1600" alt="Historic Route 66" onerror="this.style.display='none'">
       <div class="timeline-dot">11</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -258,7 +275,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 415 km</span><span>⏱️ 5 h</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/eTHI_qnk46Y/download?force=true&w=1600" alt="Grand Canyon South Rim" onerror="this.style.display='none'">
       <div class="timeline-dot">12</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -273,7 +290,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 105 km</span><span>⏱️ 1 h 30</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/b8-cnz1DyGY/download?force=true&w=1600" alt="Horseshoe Bend" onerror="this.style.display='none'">
       <div class="timeline-dot">13</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -288,7 +305,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 220 km</span><span>⏱️ 2 h 45</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/OUtu8i12Nyo/download?force=true&w=1600" alt="Antelope Canyon" onerror="this.style.display='none'">
       <div class="timeline-dot">14</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -303,7 +320,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 450 km</span><span>⏱️ 5 h</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/jlTy96QYNRU/download?force=true&w=1600" alt="Las Vegas Strip" onerror="this.style.display='none'">
       <div class="timeline-dot">15</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -318,7 +335,7 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
         <div class="metrics"><span>🚗 30 km</span><span>⏱️ 1 h</span></div>
       </div>
     </article>
-    <article class="timeline-card">
+    <article class="timeline-card"><img class="day-photo" loading="lazy" src="https://unsplash.com/photos/jlTy96QYNRU/download?force=true&w=1600" alt="Las Vegas Strip" onerror="this.style.display='none'">
       <div class="timeline-dot">16</div>
       <div class="timeline-content">
         <div class="timeline-head">
@@ -337,119 +354,189 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
 
   <section id="sitios">
     <div class="section-head"><div><h2><span  data-es="Sitios guardados" data-en="Saved places">Sitios guardados</span></h2><p><span  data-es="Una lista rápida para abrir cada punto en Google Maps." data-en="A quick list to open each place in Google Maps.">Una lista rápida para abrir cada punto en Google Maps.</span></p></div></div>
-    <div class="place-grid">
-    <article class="place-card" data-region="Texas">
+    <div class="image-note" data-es="Las fotografías se cargan desde Unsplash y necesitan conexión a internet. Pulsa Maps para abrir cada localización." data-en="Photos load from Unsplash and require an internet connection. Tap Maps to open each location.">Las fotografías se cargan desde Unsplash y necesitan conexión a internet. Pulsa Maps para abrir cada localización.</div><div class="place-grid">
+    <article class="place-card" data-region="Texas"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/zPhYj34f1Mw/download?force=true&w=1600" alt="🤠
+      
+        Texas
+        Fort Worth Stockyards
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🤠</div>
       <div>
         <small>Texas</small>
         <h3><span  data-es="Fort Worth Stockyards" data-en="Fort Worth Stockyards">Fort Worth Stockyards</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Fort+Worth+Stockyards" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Texas">
+    </div></article>
+    <article class="place-card" data-region="Texas"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/zPhYj34f1Mw/download?force=true&w=1600" alt="🎸
+      
+        Texas
+        Billy Bob’s Texas
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🎸</div>
       <div>
         <small>Texas</small>
         <h3><span  data-es="Billy Bob’s Texas" data-en="Billy Bob’s Texas">Billy Bob’s Texas</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Billy+Bob%27s+Texas" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Texas">
+    </div></article>
+    <article class="place-card" data-region="Texas"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/JliXJH8FJCM/download?force=true&w=1600" alt="⛽
+      
+        Texas
+        Buc-ee’s Hillsboro
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">⛽</div>
       <div>
         <small>Texas</small>
         <h3><span  data-es="Buc-ee’s Hillsboro" data-en="Buc-ee’s Hillsboro">Buc-ee’s Hillsboro</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Buc-ee%27s+Hillsboro" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Texas">
+    </div></article>
+    <article class="place-card" data-region="Texas"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/XwmqeX7Vsso/download?force=true&w=1600" alt="🌆
+      
+        Texas
+        San Antonio River Walk
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🌆</div>
       <div>
         <small>Texas</small>
         <h3><span  data-es="San Antonio River Walk" data-en="San Antonio River Walk">San Antonio River Walk</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=San+Antonio+River+Walk" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Texas">
+    </div></article>
+    <article class="place-card" data-region="Texas"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/XwmqeX7Vsso/download?force=true&w=1600" alt="🏛️
+      
+        Texas
+        The Alamo
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🏛️</div>
       <div>
         <small>Texas</small>
         <h3><span  data-es="The Alamo" data-en="The Alamo">The Alamo</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=The+Alamo" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Texas">
+    </div></article>
+    <article class="place-card" data-region="Texas"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/Heu3w0ejWBM/download?force=true&w=1600" alt="🌊
+      
+        Texas
+        Padre Island National Seashore
+      
+      Maps " onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🌊</div>
       <div>
         <small>Texas</small>
         <h3><span  data-es="Padre Island National Seashore" data-en="Padre Island National Seashore">Padre Island National Seashore</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Padre+Island+National+Seashore" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Texas">
+    </div></article>
+    <article class="place-card" data-region="Texas"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/Heu3w0ejWBM/download?force=true&w=1600" alt="🦈
+      
+        Texas
+        Destination Beach &amp;amp; Surf
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🦈</div>
       <div>
         <small>Texas</small>
         <h3><span  data-es="Destination Beach &amp; Surf" data-en="Destination Beach &amp; Surf">Destination Beach &amp; Surf</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Destination+Beach+and+Surf+Port+Aransas" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Nevada">
+    </div></article>
+    <article class="place-card" data-region="Nevada"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/uSsi2xViv40/download?force=true&w=1600" alt="🌉
+      
+        Nevada
+        Hoover Dam
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🌉</div>
       <div>
         <small>Nevada</small>
         <h3><span  data-es="Hoover Dam" data-en="Hoover Dam">Hoover Dam</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Hoover+Dam" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Arizona">
+    </div></article>
+    <article class="place-card" data-region="Arizona"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/IqxM5DmwRpU/download?force=true&w=1600" alt="🛣️
+      
+        Arizona
+        Route 66 en Seligman
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🛣️</div>
       <div>
         <small>Arizona</small>
         <h3><span  data-es="Route 66 en Seligman" data-en="Route 66 in Seligman">Route 66 en Seligman</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Seligman+Arizona+Route+66" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Arizona">
+    </div></article>
+    <article class="place-card" data-region="Arizona"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/eTHI_qnk46Y/download?force=true&w=1600" alt="🏜️
+      
+        Arizona
+        Grand Canyon South Rim
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🏜️</div>
       <div>
         <small>Arizona</small>
         <h3><span  data-es="Grand Canyon South Rim" data-en="Grand Canyon South Rim">Grand Canyon South Rim</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Grand+Canyon+South+Rim" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Arizona">
+    </div></article>
+    <article class="place-card" data-region="Arizona"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/b8-cnz1DyGY/download?force=true&w=1600" alt="📸
+      
+        Arizona
+        Horseshoe Bend
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">📸</div>
       <div>
         <small>Arizona</small>
         <h3><span  data-es="Horseshoe Bend" data-en="Horseshoe Bend">Horseshoe Bend</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Horseshoe+Bend" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Arizona">
+    </div></article>
+    <article class="place-card" data-region="Arizona"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/OUtu8i12Nyo/download?force=true&w=1600" alt="🧡
+      
+        Arizona
+        Antelope Canyon
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">🧡</div>
       <div>
         <small>Arizona</small>
         <h3><span  data-es="Antelope Canyon" data-en="Antelope Canyon">Antelope Canyon</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Antelope+Canyon" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Nevada">
+    </div></article>
+    <article class="place-card" data-region="Nevada"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/jlTy96QYNRU/download?force=true&w=1600" alt="⛲
+      
+        Nevada
+        Bellagio Fountains
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">⛲</div>
       <div>
         <small>Nevada</small>
         <h3><span  data-es="Bellagio Fountains" data-en="Bellagio Fountains">Bellagio Fountains</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Bellagio+Fountains" target="_blank" rel="noopener">Maps ↗</a>
-    </article>
-    <article class="place-card" data-region="Nevada">
+    </div></article>
+    <article class="place-card" data-region="Nevada"><img class="place-photo" loading="lazy" src="https://unsplash.com/photos/jlTy96QYNRU/download?force=true&w=1600" alt="✨
+      
+        Nevada
+        Fremont Street
+      
+      Maps ↗" onerror="this.style.display='none'"><div class="place-body">
       <div class="place-icon">✨</div>
       <div>
         <small>Nevada</small>
         <h3><span  data-es="Fremont Street" data-en="Fremont Street">Fremont Street</span></h3>
       </div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Fremont+Street+Experience" target="_blank" rel="noopener">Maps ↗</a>
-    </article></div>
+    </div></article></div>
   </section>
 
   <section id="presupuesto">
@@ -539,7 +626,14 @@ footer{padding:40px 0 90px;color:var(--muted);text-align:center}
 </nav>
 
 <button class="print-btn" onclick="window.print()">🖨️ PDF</button>
-<footer><div><span  data-es="Road Trip USA 2026 · Guía compartida de Sergio y Pau" data-en="USA Road Trip 2026 · Sergio and Pau&#x27;s shared guide">Road Trip USA 2026 · Guía compartida de Sergio y Pau</span></div></footer>
+<footer><div><span  data-es="Road Trip USA 2026 · Guía compartida de Sergio y Pau" data-en="USA Road Trip 2026 · Sergio and Pau&#x27;s shared guide">Road Trip USA 2026 · Guía compartida de Sergio y Pau</span></div>
+<div class="photo-credit">
+  <span data-es="Fotografías de viajeros en Unsplash: Dallas, Fort Worth, San Antonio, Corpus Christi, Port Aransas, Las Vegas, Hoover Dam, Route 66, Grand Canyon, Horseshoe Bend y Antelope Canyon."
+        data-en="Travel photography from Unsplash: Dallas, Fort Worth, San Antonio, Corpus Christi, Port Aransas, Las Vegas, Hoover Dam, Route 66, Grand Canyon, Horseshoe Bend and Antelope Canyon.">
+    Fotografías de viajeros en Unsplash: Dallas, Fort Worth, San Antonio, Corpus Christi, Port Aransas, Las Vegas, Hoover Dam, Route 66, Grand Canyon, Horseshoe Bend y Antelope Canyon.
+  </span>
+</div>
+</footer>
 
 <script>
 const translatable=[...document.querySelectorAll('[data-es][data-en]')];
