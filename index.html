@@ -37,9 +37,14 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 .i-orange{color:#fdba74;background:rgba(249,115,22,.08)}
 .i-red{color:#fda4af;background:rgba(244,63,94,.08)}
 
+
+.trip-tracker{display:grid;gap:12px}.purchase-row{display:grid;grid-template-columns:auto minmax(180px,1fr) 130px 120px;gap:12px;align-items:center;padding:13px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.purchase-row.done{border-color:rgba(82,214,129,.45);background:rgba(82,214,129,.06)}.purchase-row input[type=number]{padding:9px 10px}.purchase-row .status{font-size:.75rem;font-weight:900;color:var(--muted)}.purchase-row.done .status{color:var(--green)}.tracker-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.tracker-stat{padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.tracker-stat strong{display:block;font-size:1.35rem;color:var(--gold)}.tracker-stat span{font-size:.78rem;color:var(--muted)}.add-row{display:grid;grid-template-columns:1fr 130px auto;gap:10px;margin-top:14px}.add-row input{padding:11px;border:1px solid var(--line);border-radius:12px;background:#091321;color:white}.small-btn{border:1px solid var(--line);background:#111c30;color:var(--text);padding:9px 12px;border-radius:11px;font-weight:800;cursor:pointer}.remove-btn{border:0;background:transparent;color:var(--muted);cursor:pointer}@media(max-width:700px){.purchase-row{grid-template-columns:auto 1fr 95px}.purchase-row .status-wrap{grid-column:2/4}.tracker-summary{grid-template-columns:1fr}.add-row{grid-template-columns:1fr 100px}.add-row button{grid-column:1/3}}
+
+.sleep-box{margin-top:13px;padding:11px 13px;border-radius:13px;background:rgba(103,232,249,.06);border:1px solid rgba(103,232,249,.18)}
+.sleep-box strong{color:var(--cyan)}.sleep-box span{color:#d8e1ee}.sleep-box a{display:inline-block;margin-left:8px;text-decoration:none;font-size:.78rem;font-weight:900;border:1px solid var(--line);padding:5px 8px;border-radius:9px}
 </style></head>
 <body>
-<header><div class="wrap"><div class="brand">USA 2026</div><nav><a href="#dias"><span data-en="Itinerary" data-es="Itinerario">Itinerario</span></a><a href="#sitios"><span data-en="Places" data-es="Sitios">Sitios</span></a><a href="#comer"><span data-en="Food" data-es="Comer">Comer</span></a><a href="#extras"><span data-en="Extras" data-es="Extras">Extras</span></a><a href="#dinero"><span data-en="Budget" data-es="Presupuesto">Presupuesto</span></a><a href="#reservas"><span data-en="Bookings" data-es="Reservas">Reservas</span></a></nav><div class="langs"><button class="active" id="es">ES</button><button id="en">EN</button></div></div></header>
+<header><div class="wrap"><div class="brand">USA 2026</div><nav><a href="#dias"><span data-en="Itinerary" data-es="Itinerario">Itinerario</span></a><a href="#sitios"><span data-en="Places" data-es="Sitios">Sitios</span></a><a href="#comer"><span data-en="Food" data-es="Comer">Comer</span></a><a href="#extras"><span data-en="Extras" data-es="Extras">Extras</span></a><a href="#dinero"><span data-en="Budget" data-es="Presupuesto">Presupuesto</span></a><a href="#dormir"><span data-en="Stay" data-es="Dormir">Dormir</span></a><a href="#comprado"><span data-en="Booked" data-es="Comprado">Comprado</span></a><a href="#reservas"><span data-en="Bookings" data-es="Reservas">Reservas</span></a></nav><div class="langs"><button class="active" id="es">ES</button><button id="en">EN</button></div></div></header>
 <main>
 <section class="hero"><div class="wrap"><div class="hero-card">
 <img alt="Grand Canyon South Rim" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Grand%20Canyon%20South%20Rim%20at%20Sunset.jpg?width=1600"/>
@@ -61,7 +66,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>✈️ <span data-en="Madrid → Dallas" data-es="Madrid → Dallas">Madrid → Dallas</span></h3>
 <p><span data-en="Arrival, rental car, basic groceries and rest." data-es="Llegada, coche de alquiler, compra básica y descanso.">Llegada, coche de alquiler, compra básica y descanso.</span></p>
-<div class="day-type type-flight">✈️ <span data-en="Flight day" data-es="Día de vuelo">Día de vuelo</span></div><div class="intensity"><span class="i-yellow">✈️ ≈11 h</span><span class="i-yellow" data-en="Nonstop flight" data-es="Vuelo directo">Vuelo directo</span></div></div>
+<div class="day-type type-flight">✈️ <span data-en="Flight day" data-es="Día de vuelo">Día de vuelo</span></div><div class="intensity"><span class="i-yellow">✈️ ≈11 h</span><span class="i-yellow" data-en="Nonstop flight" data-es="Vuelo directo">Vuelo directo</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Dallas" data-es="Dallas">Dallas</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Dallas+Texas" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Fort Worth" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/FortWorthTX%20Stockyards%20Cowboys.jpg?width=1600"/>
@@ -74,7 +79,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🤠 <span data-en="Fort Worth" data-es="Fort Worth">Fort Worth</span></h3>
 <p><span data-en="Stockyards, longhorn cattle drive, Billy Bob’s and BBQ." data-es="Stockyards, desfile de longhorns, Billy Bob’s y BBQ.">Stockyards, desfile de longhorns, Billy Bob’s y BBQ.</span></p>
-<div class="day-type type-city">🏙️ <span data-en="City day" data-es="Día urbano">Día urbano</span></div></div>
+<div class="day-type type-city">🏙️ <span data-en="City day" data-es="Día urbano">Día urbano</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Dallas" data-es="Dallas">Dallas</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Dallas+Texas" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Boda en Dallas" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dallas%20Skyline.jpg?width=1600"/>
@@ -87,7 +92,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>💍 <span data-en="Wedding in Dallas" data-es="Boda en Dallas">Boda en Dallas</span></h3>
 <p><span data-en="Day reserved for the wedding." data-es="Día reservado para la boda.">Día reservado para la boda.</span></p>
-<div class="day-type type-city">💍 <span data-en="Event" data-es="Evento">Evento</span></div></div>
+<div class="day-type type-city">💍 <span data-en="Event" data-es="Evento">Evento</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Dallas" data-es="Dallas">Dallas</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Dallas+Texas" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Dallas" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dallas%20Skyline.jpg?width=1600"/>
@@ -100,7 +105,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🏙️ <span data-en="Dallas" data-es="Dallas">Dallas</span></h3>
 <p><span data-en="Free day in Dallas after the wedding: Dealey Plaza, Sixth Floor Museum, Klyde Warren Park, Bishop Arts, or simply relax and enjoy the city." data-es="Día libre en Dallas después de la boda: Dealey Plaza, Sixth Floor Museum, Klyde Warren Park, Bishop Arts o simplemente descansar y disfrutar de la ciudad.">Día libre en Dallas después de la boda: Dealey Plaza, Sixth Floor Museum, Klyde Warren Park, Bishop Arts o simplemente descansar y disfrutar de la ciudad.</span></p>
-<div class="day-type type-city">🏙️ <span data-en="City day" data-es="Día urbano">Día urbano</span></div></div>
+<div class="day-type type-city">🏙️ <span data-en="City day" data-es="Día urbano">Día urbano</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Dallas" data-es="Dallas">Dallas</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Dallas+Texas" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Dallas" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dallas%20Skyline.jpg?width=1600"/>
@@ -113,7 +118,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🤝 <span data-en="Dallas with the groom" data-es="Dallas con el novio">Dallas con el novio</span></h3>
 <p><span data-en="Spend Monday with the groom. A flexible day to eat together, walk around, see his favorite places and enjoy Dallas without rushing." data-es="Pasar el lunes con el novio. Día flexible para comer juntos, pasear, conocer sus sitios favoritos y aprovechar Dallas sin prisas.">Pasar el lunes con el novio. Día flexible para comer juntos, pasear, conocer sus sitios favoritos y aprovechar Dallas sin prisas.</span></p>
-<div class="day-type type-city">🤝 <span data-en="Day with friends" data-es="Día con amigos">Día con amigos</span></div></div>
+<div class="day-type type-city">🤝 <span data-en="Day with friends" data-es="Día con amigos">Día con amigos</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Dallas" data-es="Dallas">Dallas</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Dallas+Texas" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="San Antonio River Walk" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1600"/>
@@ -126,7 +131,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🚗 <span data-en="Dallas → San Antonio" data-es="Dallas → San Antonio">Dallas → San Antonio</span></h3>
 <p><span data-en="Leave early for San Antonio. Optional stops at Buc-ee’s, Waco or Austin. Arrive in time to enjoy the River Walk in the afternoon and evening." data-es="Salir temprano hacia San Antonio. Paradas opcionales en Buc-ee’s, Waco o Austin. Llegada para disfrutar del River Walk por la tarde y noche.">Salir temprano hacia San Antonio. Paradas opcionales en Buc-ee’s, Waco o Austin. Llegada para disfrutar del River Walk por la tarde y noche.</span></p>
-<div class="day-type type-transfer">🚗 <span data-en="Transfer" data-es="Traslado">Traslado</span></div><div class="intensity"><span class="i-orange">≈445–490 km</span><span class="i-orange">≈4 h 30–5 h</span><span class="i-orange" data-en="Long day" data-es="Día intenso">Día intenso</span></div></div>
+<div class="day-type type-transfer">🚗 <span data-en="Transfer" data-es="Traslado">Traslado</span></div><div class="intensity"><span class="i-orange">≈445–490 km</span><span class="i-orange">≈4 h 30–5 h</span><span class="i-orange" data-en="Long day" data-es="Día intenso">Día intenso</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="San Antonio · River Walk / Downtown" data-es="San Antonio · River Walk / Downtown">San Antonio · River Walk / Downtown</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+River+Walk+San+Antonio" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Corpus Christi" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Corpus%20Christi%20TX%20skyline.JPG?width=1600"/>
@@ -139,7 +144,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🌊 <span data-en="San Antonio → Corpus Christi" data-es="San Antonio → Corpus Christi">San Antonio → Corpus Christi</span></h3>
 <p><span data-en="Finish any remaining San Antonio sights in the morning, then drive to Corpus. Afternoon: Richard King High School, friends, Acapulco, Wings N More and personal places." data-es="Completar por la mañana lo que quede de San Antonio y bajar a Corpus. Por la tarde: Richard King High School, amigos, Acapulco, Wings N More y lugares personales.">Completar por la mañana lo que quede de San Antonio y bajar a Corpus. Por la tarde: Richard King High School, amigos, Acapulco, Wings N More y lugares personales.</span></p>
-<div class="day-type type-transfer">🚗 <span data-en="Transfer + personal afternoon" data-es="Traslado + tarde personal">Traslado + tarde personal</span></div><div class="intensity"><span class="i-yellow">≈235 km</span><span class="i-yellow">≈2 h 20</span><span class="i-yellow" data-en="Balanced day" data-es="Día equilibrado">Día equilibrado</span></div></div>
+<div class="day-type type-transfer">🚗 <span data-en="Transfer + personal afternoon" data-es="Traslado + tarde personal">Traslado + tarde personal</span></div><div class="intensity"><span class="i-yellow">≈235 km</span><span class="i-yellow">≈2 h 20</span><span class="i-yellow" data-en="Balanced day" data-es="Día equilibrado">Día equilibrado</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Corpus Christi" data-es="Corpus Christi">Corpus Christi</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Corpus+Christi+Texas" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Padre Island National Seashore" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Padre%20Island%20National%20Seashore%2C%20beach%2C%20Kleberg%20Co%2C%20TX%3B%201%20Nov%202022.jpg?width=1600"/>
@@ -152,7 +157,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🦈 <span data-en="Corpus + Padre Island + Port Aransas" data-es="Corpus + Padre Island + Port Aransas">Corpus + Padre Island + Port Aransas</span></h3>
 <p><span data-en="Full coastal day: Padre Island, Port Aransas, the giant shark, beach and sunset. Fit in friends or personal Corpus spots depending on timing." data-es="Día completo por la costa: Padre Island, Port Aransas, el tiburón gigante, playa y atardecer. Encajar también amigos o sitios personales de Corpus según horarios.">Día completo por la costa: Padre Island, Port Aransas, el tiburón gigante, playa y atardecer. Encajar también amigos o sitios personales de Corpus según horarios.</span></p>
-<div class="day-type type-excursion">🧭 <span data-en="Day trip" data-es="Excursión">Excursión</span></div><div class="intensity"><span class="i-yellow">≈150–170 km</span><span class="i-yellow">≈3 h</span><span class="i-yellow" data-en="Driving spread through the day" data-es="Conducción repartida">Conducción repartida</span></div></div>
+<div class="day-type type-excursion">🧭 <span data-en="Day trip" data-es="Excursión">Excursión</span></div><div class="intensity"><span class="i-yellow">≈150–170 km</span><span class="i-yellow">≈3 h</span><span class="i-yellow" data-en="Driving spread through the day" data-es="Conducción repartida">Conducción repartida</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Corpus Christi" data-es="Corpus Christi">Corpus Christi</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Corpus+Christi+Texas" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Corpus → Las Vegas" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Las%20Vegas%20Strip%20at%20night%2C%202012.jpg?width=1600"/>
@@ -165,7 +170,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>✈️ <span data-en="Corpus → Las Vegas" data-es="Corpus → Las Vegas">Corpus → Las Vegas</span></h3>
 <p><span data-en="Flight, rental car and first night on the Strip." data-es="Vuelo, coche y primera noche en el Strip.">Vuelo, coche y primera noche en el Strip.</span></p>
-<div class="day-type type-flight">✈️ <span data-en="Flight day" data-es="Día de vuelo">Día de vuelo</span></div><div class="intensity"><span class="i-yellow">✈️ ≈5–6 h</span><span class="i-yellow" data-en="Usually 1 stop" data-es="Normalmente 1 escala">Normalmente 1 escala</span></div></div>
+<div class="day-type type-flight">✈️ <span data-en="Flight day" data-es="Día de vuelo">Día de vuelo</span></div><div class="intensity"><span class="i-yellow">✈️ ≈5–6 h</span><span class="i-yellow" data-en="Usually 1 stop" data-es="Normalmente 1 escala">Normalmente 1 escala</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Las Vegas · Strip" data-es="Las Vegas · Strip">Las Vegas · Strip</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Las+Vegas+Strip" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Las Vegas" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Las%20Vegas%20Strip%20at%20night%2C%202012.jpg?width=1600"/>
@@ -178,7 +183,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🎰 <span data-en="Las Vegas" data-es="Las Vegas">Las Vegas</span></h3>
 <p><span data-en="The Strip, Bellagio, Venetian and Fremont." data-es="Strip, Bellagio, Venetian y Fremont.">Strip, Bellagio, Venetian y Fremont.</span></p>
-<div class="day-type type-city">🎰 <span data-en="City day" data-es="Día urbano">Día urbano</span></div></div>
+<div class="day-type type-city">🎰 <span data-en="City day" data-es="Día urbano">Día urbano</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Las Vegas · Strip" data-es="Las Vegas · Strip">Las Vegas · Strip</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Las+Vegas+Strip" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Las Vegas → Williams" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Historic%20Route%2066%2C%20Seligman.jpg?width=1600"/>
@@ -191,7 +196,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🛣️ <span data-en="Las Vegas → Williams" data-es="Las Vegas → Williams">Las Vegas → Williams</span></h3>
 <p><span data-en="Hoover Dam, Kingman, Seligman and Route 66." data-es="Hoover Dam, Kingman, Seligman y Route 66.">Hoover Dam, Kingman, Seligman y Route 66.</span></p>
-<div class="day-type type-transfer">🚗 <span data-en="Transfer with stops" data-es="Traslado con paradas">Traslado con paradas</span></div><div class="intensity"><span class="i-orange">≈415 km</span><span class="i-orange">≈5 h</span><span class="i-orange" data-en="Long day" data-es="Día intenso">Día intenso</span></div></div>
+<div class="day-type type-transfer">🚗 <span data-en="Transfer with stops" data-es="Traslado con paradas">Traslado con paradas</span></div><div class="intensity"><span class="i-orange">≈415 km</span><span class="i-orange">≈5 h</span><span class="i-orange" data-en="Long day" data-es="Día intenso">Día intenso</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Tusayan / Grand Canyon Village" data-es="Tusayan / Grand Canyon Village">Tusayan / Grand Canyon Village</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Tusayan+Arizona" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Grand Canyon" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Grand%20Canyon%20South%20Rim%20at%20Sunset.jpg?width=1600"/>
@@ -204,7 +209,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🏜️ <span data-en="Grand Canyon" data-es="Grand Canyon">Grand Canyon</span></h3>
 <p><span data-en="South Rim, viewpoints and sunset." data-es="South Rim, miradores y atardecer.">South Rim, miradores y atardecer.</span></p>
-<div class="day-type type-excursion">🧭 <span data-en="Park excursion" data-es="Excursión dentro del parque">Excursión dentro del parque</span></div><div class="intensity"><span class="i-yellow">≈90–120 km</span><span class="i-yellow">≈2–3 h</span><span class="i-yellow" data-en="Driving between viewpoints" data-es="Conducción entre miradores">Conducción entre miradores</span></div></div>
+<div class="day-type type-excursion">🧭 <span data-en="Park excursion" data-es="Excursión dentro del parque">Excursión dentro del parque</span></div><div class="intensity"><span class="i-yellow">≈90–120 km</span><span class="i-yellow">≈2–3 h</span><span class="i-yellow" data-en="Driving between viewpoints" data-es="Conducción entre miradores">Conducción entre miradores</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Tusayan / Grand Canyon Village" data-es="Tusayan / Grand Canyon Village">Tusayan / Grand Canyon Village</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Tusayan+Arizona" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Grand Canyon → Page" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Horseshoe%20Bend%20-%20Arizona.jpg?width=1600"/>
@@ -217,7 +222,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>📸 <span data-en="Grand Canyon → Page" data-es="Grand Canyon → Page">Grand Canyon → Page</span></h3>
 <p><span data-en="Desert View, Horseshoe Bend and Antelope Canyon." data-es="Desert View, Horseshoe Bend y Antelope Canyon.">Desert View, Horseshoe Bend y Antelope Canyon.</span></p>
-<div class="day-type type-transfer">🚗 <span data-en="Scenic transfer" data-es="Traslado panorámico">Traslado panorámico</span></div><div class="intensity"><span class="i-yellow">≈220 km</span><span class="i-yellow">≈2 h 45</span><span class="i-yellow" data-en="Balanced day" data-es="Día equilibrado">Día equilibrado</span></div></div>
+<div class="day-type type-transfer">🚗 <span data-en="Scenic transfer" data-es="Traslado panorámico">Traslado panorámico</span></div><div class="intensity"><span class="i-yellow">≈220 km</span><span class="i-yellow">≈2 h 45</span><span class="i-yellow" data-en="Balanced day" data-es="Día equilibrado">Día equilibrado</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Page" data-es="Page">Page</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Page+Arizona" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Page → Las Vegas" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Upper%20Antelope%20Canyon%2003%202013.jpg?width=1600"/>
@@ -230,7 +235,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>🚗 <span data-en="Page → Las Vegas" data-es="Page → Las Vegas">Page → Las Vegas</span></h3>
 <p><span data-en="Kanab, St. George and return to Las Vegas." data-es="Kanab, St. George y regreso a Las Vegas.">Kanab, St. George y regreso a Las Vegas.</span></p>
-<div class="day-type type-transfer">🚗 <span data-en="Transfer" data-es="Traslado">Traslado</span></div><div class="intensity"><span class="i-red">≈450 km</span><span class="i-red">≈5 h</span><span class="i-red" data-en="Very long day" data-es="Día muy largo">Día muy largo</span></div></div>
+<div class="day-type type-transfer">🚗 <span data-en="Transfer" data-es="Traslado">Traslado</span></div><div class="intensity"><span class="i-red">≈450 km</span><span class="i-red">≈5 h</span><span class="i-red" data-en="Very long day" data-es="Día muy largo">Día muy largo</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Las Vegas · Strip" data-es="Las Vegas · Strip">Las Vegas · Strip</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Las+Vegas+Strip" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Las Vegas libre" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Las%20Vegas%20Strip%20at%20night%2C%202012.jpg?width=1600"/>
@@ -243,7 +248,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>✨ <span data-en="Free day in Las Vegas" data-es="Las Vegas libre">Las Vegas libre</span></h3>
 <p><span data-en="Red Rock, shopping or a show." data-es="Red Rock, compras o espectáculo.">Red Rock, compras o espectáculo.</span></p>
-<div class="day-type type-city">✨ <span data-en="Flexible day" data-es="Día flexible">Día flexible</span></div></div>
+<div class="day-type type-city">✨ <span data-en="Flexible day" data-es="Día flexible">Día flexible</span></div><div class="sleep-box">🛏️ <strong data-en="Sleep:" data-es="Dormir:">Dormir:</strong> <span data-en="Las Vegas · Strip" data-es="Las Vegas · Strip">Las Vegas · Strip</span><a data-en="Find accommodation ↗" data-es="Buscar alojamiento ↗" href="https://www.google.com/maps/search/?api=1&amp;query=hotels+Las+Vegas+Strip" rel="noopener" target="_blank">Buscar alojamiento ↗</a></div></div>
 </article>
 <article class="day-card">
 <img alt="Las Vegas → Madrid" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Las%20Vegas%20Strip%20at%20night%2C%202012.jpg?width=1600"/>
@@ -256,7 +261,7 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 </div>
 <h3>✈️ <span data-en="Las Vegas → Madrid" data-es="Las Vegas → Madrid">Las Vegas → Madrid</span></h3>
 <p><span data-en="Return the rental car and fly home." data-es="Devolución del coche y regreso.">Devolución del coche y regreso.</span></p>
-<div class="day-type type-flight">✈️ <span data-en="Flight day" data-es="Día de vuelo">Día de vuelo</span></div><div class="intensity"><span class="i-orange">✈️ ≈13–16 h</span><span class="i-orange" data-en="Usually 1 stop" data-es="Normalmente 1 escala">Normalmente 1 escala</span></div></div>
+<div class="day-type type-flight">✈️ <span data-en="Flight day" data-es="Día de vuelo">Día de vuelo</span></div><div class="intensity"><span class="i-orange">✈️ ≈13–16 h</span><span class="i-orange" data-en="Usually 1 stop" data-es="Normalmente 1 escala">Normalmente 1 escala</span></div><div class="sleep-box">🛏️ <strong data-en="Night:" data-es="Noche:">Noche:</strong> <span data-en="In flight / return home" data-es="En vuelo / regreso">En vuelo / regreso</span></div></div>
 </article></div></div></section>
 <section id="sitios"><div class="wrap"><div class="heading"><div><h2><span data-en="Essential places" data-es="Lugares imprescindibles">Lugares imprescindibles</span></h2><p><span data-en="Clean cards, verified images and direct access to Maps." data-es="Tarjetas limpias, imágenes verificadas y acceso directo a Maps.">Tarjetas limpias, imágenes verificadas y acceso directo a Maps.</span></p></div></div><div class="places">
 <article class="place-card">
@@ -489,7 +494,24 @@ section{padding:42px 0}.heading{display:flex;justify-content:space-between;align
 <div class="panel"><h3><span data-en="💳 Before the trip" data-es="💳 Antes del viaje">💳 Antes del viaje</span></h3><div class="budget-row"><span><span data-en="Confirmed international flights" data-es="Vuelos internacionales confirmados">Vuelos internacionales confirmados</span></span><strong>1,958 €</strong></div><div class="budget-row"><span><span data-en="Corpus → Las Vegas" data-es="Corpus → Las Vegas">Corpus → Las Vegas</span></span><strong>370 €</strong></div><div class="budget-row"><span><span data-en="Rental cars" data-es="Coches de alquiler">Coches de alquiler</span></span><strong>739 €</strong></div><div class="budget-row"><span><span data-en="Accommodation" data-es="Alojamientos">Alojamientos</span></span><strong>1,530 €</strong></div><div class="total"><span><span data-en="Total to book" data-es="Total a reservar">Total a reservar</span></span><strong>4,597 €</strong></div></div>
 <div class="panel"><h3><span data-en="💵 During the trip" data-es="💵 Durante el viaje">💵 Durante el viaje</span></h3><div class="budget-row"><span><span data-en="Fuel" data-es="Gasolina">Gasolina</span></span><strong>200 €</strong></div><div class="budget-row"><span><span data-en="Food and drinks" data-es="Comida y bebida">Comida y bebida</span></span><strong>750 €</strong></div><div class="budget-row"><span><span data-en="Tickets" data-es="Entradas">Entradas</span></span><strong>300 €</strong></div><div class="budget-row"><span><span data-en="Insurance, parking and buffer" data-es="Seguro, parkings y margen">Seguro, parkings y margen</span></span><strong>250 €</strong></div><div class="total"><span><span data-en="Money to spend there" data-es="Dinero para llevar">Dinero para llevar</span></span><strong>1,500 €</strong></div></div>
 </div><div class="panel" style="margin-top:18px"><div style="display:flex;justify-content:space-between"><span><span data-en="Savings so far" data-es="Ahorro acumulado">Ahorro acumulado</span></span><strong id="saving-label">0 € / 4,597 €</strong></div><div class="progress"><div id="bar"></div></div><input id="saving" max="4597" min="0" placeholder="Introduce cuánto tenéis ahorrado / Enter current savings" step="50" type="number"/></div></div></section>
-<section id="reservas"><div class="wrap"><div class="heading"><div><h2><span data-en="Booking checklist" data-es="Checklist de reservas">Checklist de reservas</span></h2><p><span data-en="Progress is saved in this browser." data-es="El progreso se guarda en este navegador.">El progreso se guarda en este navegador.</span></p></div></div><div class="panel checks"><label><input data-id="c0" type="checkbox"/><span data-en="Book all three flights" data-es="Comprar los tres vuelos">Comprar los tres vuelos</span></label><label><input data-id="c1" type="checkbox"/><span data-en="Book Texas rental car" data-es="Reservar coche de Texas">Reservar coche de Texas</span></label><label><input data-id="c2" type="checkbox"/><span data-en="Book western rental car" data-es="Reservar coche del oeste">Reservar coche del oeste</span></label><label><input data-id="c3" type="checkbox"/><span data-en="Book Dallas accommodation" data-es="Reservar Dallas">Reservar Dallas</span></label><label><input data-id="c4" type="checkbox"/><span data-en="Book San Antonio accommodation" data-es="Reservar San Antonio">Reservar San Antonio</span></label><label><input data-id="c5" type="checkbox"/><span data-en="Book Corpus Christi accommodation" data-es="Reservar Corpus Christi">Reservar Corpus Christi</span></label><label><input data-id="c6" type="checkbox"/><span data-en="Book Williams accommodation" data-es="Reservar Williams">Reservar Williams</span></label><label><input data-id="c7" type="checkbox"/><span data-en="Book Grand Canyon / Tusayan" data-es="Reservar Grand Canyon / Tusayan">Reservar Grand Canyon / Tusayan</span></label><label><input data-id="c8" type="checkbox"/><span data-en="Book Page accommodation" data-es="Reservar Page">Reservar Page</span></label><label><input data-id="c9" type="checkbox"/><span data-en="Book Las Vegas accommodation" data-es="Reservar Las Vegas">Reservar Las Vegas</span></label><label><input data-id="c10" type="checkbox"/><span data-en="Book Antelope Canyon" data-es="Reservar Antelope Canyon">Reservar Antelope Canyon</span></label></div></div></section>
+
+<section id="dormir"><div class="wrap">
+<div class="heading"><div><h2><span data-en="Where to stay" data-es="Dónde dormir">Dónde dormir</span></h2>
+<p><span data-en="Recommended bases to avoid unnecessary driving and make better use of each day." data-es="Bases recomendadas para evitar kilómetros innecesarios y aprovechar mejor cada día.">Bases recomendadas para evitar kilómetros innecesarios y aprovechar mejor cada día.</span></p></div></div>
+<div class="grid2">
+<div class="panel"><h3>🇨🇱 Texas</h3><div class="budget-row"><span>5–9 nov · Dallas</span><strong>5 noches</strong></div><div class="budget-row"><span>10 nov · San Antonio · River Walk/Downtown</span><strong>1 noche</strong></div><div class="budget-row"><span>11–12 nov · Corpus Christi</span><strong>2 noches</strong></div></div>
+<div class="panel"><h3>🏜️ Oeste</h3><div class="budget-row"><span>13–14 nov · Las Vegas Strip</span><strong>2 noches</strong></div><div class="budget-row"><span>15–16 nov · Tusayan / Grand Canyon Village</span><strong>2 noches</strong></div><div class="budget-row"><span>17 nov · Page</span><strong>1 noche</strong></div><div class="budget-row"><span>18–19 nov · Las Vegas Strip</span><strong>2 noches</strong></div></div>
+</div>
+<div class="panel" style="margin-top:18px"><h3>🏜️ Grand Canyon: la decisión importante</h3><p><span data-en="I would not stay in Las Vegas to visit the South Rim: it is about 447 km away. For November 15 and 16, I would first search Grand Canyon Village (inside the park), and if it is too expensive or unavailable, Tusayan. Tusayan is only about 11 km from Grand Canyon Village. Williams is often a cheaper alternative, but it is about 100 km from the South Rim and means repeating the drive." data-es="No recomiendo dormir en Las Vegas para visitar el South Rim: está a unos 447 km. Para las noches del 15 y 16 buscaría primero Grand Canyon Village (dentro del parque) y, si sale caro o no hay disponibilidad, Tusayan. Tusayan está a solo unos 11 km de Grand Canyon Village. Williams es una alternativa normalmente más económica, pero está a unos 100 km del South Rim y obliga a repetir carretera.">No recomiendo dormir en Las Vegas para visitar el South Rim: está a unos 447 km. Para las noches del 15 y 16 buscaría primero <strong>Grand Canyon Village</strong> (dentro del parque) y, si sale caro o no hay disponibilidad, <strong>Tusayan</strong>. Tusayan está a solo unos 11 km de Grand Canyon Village. <strong>Williams</strong> es una alternativa normalmente más económica, pero está a unos 100 km del South Rim y obliga a repetir carretera.</span></p></div>
+</div></section>
+<section id="comprado"><div class="wrap">
+<div class="heading"><div><h2><span data-en="Booked &amp; actual cost" data-es="Comprado y precio real">Comprado y precio real</span></h2>
+<p><span data-en="Tick what you have booked and replace the estimate with the actual amount paid. It is saved automatically in this browser." data-es="Marca lo que ya tenéis reservado y cambia la estimación por el precio que pagasteis. Se guarda automáticamente en este navegador.">Marca lo que ya tenéis reservado y cambia la estimación por el precio que pagasteis. Se guarda automáticamente en este navegador.</span></p></div></div>
+<div class="panel"><div class="trip-tracker" id="trip-tracker"></div>
+<div class="tracker-summary"><div class="tracker-stat"><strong id="tracker-paid">0 €</strong><span data-en="already booked" data-es="ya comprado">ya comprado</span></div><div class="tracker-stat"><strong id="tracker-pending">0 €</strong><span data-en="estimated pending" data-es="pendiente estimado">pendiente estimado</span></div><div class="tracker-stat"><strong id="tracker-total">0 €</strong><span data-en="projected trip + €1,500 spending" data-es="viaje previsto + 1.500 € de gasto">viaje previsto + 1.500 € de gasto</span></div></div>
+<div class="add-row"><input id="new-item-name" placeholder="Ej. Antelope Canyon / Hotel Williams" type="text"/><input id="new-item-price" min="0" placeholder="€" step="1" type="number"/><button class="small-btn" id="add-trip-item" type="button">+ Añadir</button></div>
+<p class="section-note" style="margin-top:12px;margin-bottom:0"><span data-en="Madrid → Dallas and Las Vegas → Madrid are already marked as booked for €1,958." data-es="Los vuelos Madrid → Dallas y Las Vegas → Madrid aparecen ya como comprados por 1.958 €.">Los vuelos Madrid → Dallas y Las Vegas → Madrid aparecen ya como comprados por 1.958 €.</span></p>
+</div></div></section><section id="reservas"><div class="wrap"><div class="heading"><div><h2><span data-en="Booking checklist" data-es="Checklist de reservas">Checklist de reservas</span></h2><p><span data-en="Progress is saved in this browser." data-es="El progreso se guarda en este navegador.">El progreso se guarda en este navegador.</span></p></div></div><div class="panel checks"><label><input data-id="c0" type="checkbox"/><span data-en="Book all three flights" data-es="Comprar los tres vuelos">Comprar los tres vuelos</span></label><label><input data-id="c1" type="checkbox"/><span data-en="Book Texas rental car" data-es="Reservar coche de Texas">Reservar coche de Texas</span></label><label><input data-id="c2" type="checkbox"/><span data-en="Book western rental car" data-es="Reservar coche del oeste">Reservar coche del oeste</span></label><label><input data-id="c3" type="checkbox"/><span data-en="Book Dallas accommodation" data-es="Reservar Dallas">Reservar Dallas</span></label><label><input data-id="c4" type="checkbox"/><span data-en="Book San Antonio accommodation" data-es="Reservar San Antonio">Reservar San Antonio</span></label><label><input data-id="c5" type="checkbox"/><span data-en="Book Corpus Christi accommodation" data-es="Reservar Corpus Christi">Reservar Corpus Christi</span></label><label><input data-id="c6" type="checkbox"/><span data-en="Book Williams accommodation" data-es="Reservar Williams">Reservar Williams</span></label><label><input data-id="c7" type="checkbox"/><span data-en="Book Grand Canyon / Tusayan" data-es="Reservar Grand Canyon / Tusayan">Reservar Grand Canyon / Tusayan</span></label><label><input data-id="c8" type="checkbox"/><span data-en="Book Page accommodation" data-es="Reservar Page">Reservar Page</span></label><label><input data-id="c9" type="checkbox"/><span data-en="Book Las Vegas accommodation" data-es="Reservar Las Vegas">Reservar Las Vegas</span></label><label><input data-id="c10" type="checkbox"/><span data-en="Book Antelope Canyon" data-es="Reservar Antelope Canyon">Reservar Antelope Canyon</span></label></div></div></section>
 </main>
 <footer><div class="wrap">Road Trip USA 2026 · Sergio &amp; Pau<div class="credit"><span data-en="Images: Wikimedia Commons. The Port Aransas shark photo is sourced from Secret Houston." data-es="Imágenes: Wikimedia Commons. La fotografía del tiburón de Port Aransas procede de Secret Houston.">Imágenes: Wikimedia Commons. La fotografía del tiburón de Port Aransas procede de Secret Houston.</span></div></div><div class="credit"><span data-en="Richard King High School photo: Classreport.org. Address and school details checked against the official CCISD website." data-es="Foto de Richard King High School: Classreport.org. Dirección y datos del centro contrastados con la web oficial de CCISD.">Foto de Richard King High School: Classreport.org. Dirección y datos del centro contrastados con la web oficial de CCISD.</span></div></footer>
 <script>
@@ -500,4 +522,30 @@ document.querySelectorAll('[data-id]').forEach(x=>{const k='check-'+x.dataset.id
 const goal=4597,inp=document.getElementById('saving'),lab=document.getElementById('saving-label'),bar=document.getElementById('bar');
 function update(){let v=Math.max(0,Math.min(goal,Number(inp.value)||0));lab.textContent=v.toLocaleString('es-ES')+' € / '+goal.toLocaleString('es-ES')+' €';bar.style.width=(v/goal*100)+'%';localStorage.setItem('saving',v)}inp.value=localStorage.getItem('saving')||'';inp.oninput=update;update();
 </script>
-</body></html>
+<script>
+(function(){
+const KEY='usa2026_tracker_v3';
+const defaults=[
+{id:'intl',name:'Vuelos Madrid → Dallas + Las Vegas → Madrid',price:1958,bought:true},
+{id:'crplas',name:'Vuelo Corpus Christi → Las Vegas',price:370,bought:false},
+{id:'cartx',name:'Coche de alquiler · Texas',price:319,bought:false},
+{id:'carwest',name:'Coche de alquiler · Oeste',price:420,bought:false},
+{id:'dallas',name:'Alojamiento · Dallas · 5 noches',price:542,bought:false},
+{id:'sa',name:'Alojamiento · San Antonio · 1 noche',price:120,bought:false},
+{id:'corpus',name:'Alojamiento · Corpus Christi · 2 noches',price:167,bought:false},
+{id:'west',name:'Alojamientos · Oeste · Vegas 4 + Grand Canyon 2 + Page 1',price:700,bought:false},
+{id:'act',name:'Entradas / actividades',price:300,bought:false}
+];
+let items;try{items=JSON.parse(localStorage.getItem(KEY))||defaults}catch(e){items=defaults}
+const box=document.getElementById('trip-tracker');
+const eur=n=>new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(Number(n)||0);
+function save(){localStorage.setItem(KEY,JSON.stringify(items))}
+function render(){box.innerHTML='';
+items.forEach((it,i)=>{const row=document.createElement('div');row.className='purchase-row'+(it.bought?' done':'');
+row.innerHTML=`<input type="checkbox" ${it.bought?'checked':''}><div><strong>${it.name}</strong></div><input class="item-price" type="number" min="0" step="1" value="${it.price}"><div class="status-wrap"><span class="status">${it.bought?'✓ COMPRADO':'PENDIENTE'}</span> <button class="remove-btn" title="Eliminar">✕</button></div>`;
+const c=row.querySelector('input[type=checkbox]'),p=row.querySelector('.item-price');c.onchange=()=>{it.bought=c.checked;save();render()};p.onchange=()=>{it.price=Number(p.value)||0;save();render()};row.querySelector('.remove-btn').onclick=()=>{items.splice(i,1);save();render()};box.appendChild(row)});
+const paid=items.filter(x=>x.bought).reduce((s,x)=>s+(+x.price||0),0),pending=items.filter(x=>!x.bought).reduce((s,x)=>s+(+x.price||0),0);
+document.getElementById('tracker-paid').textContent=eur(paid);document.getElementById('tracker-pending').textContent=eur(pending);document.getElementById('tracker-total').textContent=eur(paid+pending+1500)}
+document.getElementById('add-trip-item').onclick=()=>{const n=document.getElementById('new-item-name'),p=document.getElementById('new-item-price');if(!n.value.trim())return;items.push({id:'x'+Date.now(),name:n.value.trim(),price:+p.value||0,bought:false});n.value='';p.value='';save();render()};render()
+})();
+</script></body></html>
